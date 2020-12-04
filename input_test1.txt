@@ -1,0 +1,29 @@
+//阿巴阿巴
+int  program()
+{
+	int i;
+	int j;
+	int a;
+	int b;
+	int c; //定义一个c
+	/* 今年是2020年 */
+	a=3;
+	b=4;
+	c=2;
+	i=0; 	
+	/* 我永远赶不完ddl呜呜呜 */
+	if(a>(b+c))
+	{
+		j=a+(b*c+1);
+	}
+	else
+	{
+		j=a;
+	}
+	while(i<=100)
+	{
+		i=j*2;
+	}
+	return i;
+}
+#
