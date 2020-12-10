@@ -10,6 +10,14 @@ bool isAlpha(char c)
 	return (c >= 'a' && c <= 'z') ? true : false;
 }
 
+bool isVt(string s)
+{
+	return s == "int" || s == "void" || s == "if" || s == "else" || s == "while" || s == "return" || s == "ID" || s == "num"
+		|| s == ">" || s == "<" || s == ">=" || s == "<=" || s == "=="  || s == "!=" 
+		|| s == "," || s == ";" || s == "+" || s == "-" || s == "*" || s == "/" || s == "="
+		|| s == "(" || s == ")" || s == "{" || s == "}";
+}
+
 // 转换Token中的First项，便于输出
 string transTokenFirst(Token t)
 {

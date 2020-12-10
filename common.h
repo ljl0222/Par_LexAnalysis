@@ -5,6 +5,10 @@
 #include <vector>
 #include <string>
 #include <list>
+#include <sstream>
+#include <iomanip>
+#include <map>
+#include <set>
 
 using namespace std;
 
@@ -75,4 +79,5 @@ typedef pair<LexType, string> Token;
 // 一些简单的函数定义
 bool isNum(char c);
 bool isAlpha(char c);
+bool isVt(string s);
 string transTokenFirst(Token t);
