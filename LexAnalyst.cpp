@@ -73,7 +73,7 @@ Token LexAnalyst::getToken()
 		}
 		/* 多行注释，就像我一样QAQ */
 		else if (input.peek() == '*')
-		{	
+		{
 			input.get();
 			string tempString = "/*";
 			while (input >> c)
@@ -146,17 +146,17 @@ Token LexAnalyst::getToken()
 	}
 	else if (c == '#')
 		return Token(ENDFILE, "#");
-	else if(c == '\n') // 然后发现这里好像不行，上面采用流输入的时候无法读出换行
+	else if (c == '\n') // 然后发现这里好像不行，上面采用流输入的时候无法读出换行
 		return Token(NEXTL, "\\n");
 	// 进入到这里，说明是字母或数字或乱码（乱码就错了，else判断掉）
-	else 
+	else
 	{
 		if (isNum(c))
 		{
 			string tempString;
 			tempString += c;
 			while (1)
-			{	
+			{
 				char tempNum = input.peek();
 				if (isNum(tempNum))
 				{
@@ -235,5 +235,30 @@ Status LexAnalyst::Output()
 	{
 		cout << '<' << transTokenFirst(*resultIterator) << ',' << resultIterator->second << '>' << endl;
 	}
+	return OK;
+}
+
+list<Token>& LexAnalyst::getRes()
+{
+	return result;
+}
+
+// 输出到文件
+Status LexAnalyst::OutputToFile()
+{
+	ofstream out;
+	out.open("outputLex.txt", ios::out);
+	if (!out.is_open())
+	{
+		cerr << "打开输出文件outputLex.txt失败" << endl;
+		exit(-1);
+	}
+	list <Token>::iterator resultIterator;
+	for (resultIterator = result.begin(); resultIterator != result.end(); resultIterator++)
+	{
+		out << '<' << transTokenFirst(*resultIterator) << ',' << resultIterator->second << '>' << endl;
+	}
+
+	out.close();
 	return OK;
 }

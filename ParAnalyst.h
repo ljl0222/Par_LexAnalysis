@@ -43,20 +43,40 @@ public:
 	set<Item> Items;
 };
 
+typedef pair<int, Symbol> GOTO;
+
+
 class DFA
 {
 public:
 	list<I> status;
+	map<GOTO, int> gotos; //当前状态读到GOTO（当前态读到symbol到哪里），到map映射的gotos的int处
+};
+
+enum Behave { shift, reduct, accept, error };
+class Behavior
+{
+public:
+	Behave bh;
+	int nextS;
+	Behavior();
+	Behavior(Behave bh, int s);
+
 };
 
 class ParAnalyst
 {
 private:
 	ifstream inputProductions;
+	// ifstream inputLex;
 	vector<Production> Productions;
 	map<Symbol, set<Symbol>> First;
 	map<Symbol, set<Symbol>> Follow;
 	DFA DFA;
+	map<GOTO, Behavior> ActionTb;
+	map<GOTO, int> GotoTb;
+	stack<int> StatusStack;
+	stack<Symbol> SymbolStack;
 public:
 	ParAnalyst();
 	ParAnalyst(string path);
@@ -64,11 +84,20 @@ public:
 	Status getProductions();
 	Status showProductions();
 	Status initFirst();
-	Status initFollow();
+	// Status initFollow();
 	Status showFirst();
 	Status createDFA();
 	I Closure(Item item);
 	set<Symbol> getExpect(list<Symbol> S);
+	Status outputAction();
+	Status outputActionToFile();
+	Status outputGoto();
+	Status outputGotoToFile();
+	Status LRAnalyse(list<Token> LexRes);
+	Status outputStatusStack();
+	Status outputSymbolStack();
+	Status outputStack(int cnt);
+	Status outputStackToFile(int cnt);
 };
 
 

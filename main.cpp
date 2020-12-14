@@ -4,16 +4,22 @@
 
 int main()
 {
-	// LexAnalyst LA("input_test1.txt");
-	// LA.Analyse();
+	LexAnalyst LA("inputLex.txt");
+	LA.Analyse();
 	// LA.Output();
+	LA.OutputToFile();
 
 	ParAnalyst PA("inputProductions.txt");
 	PA.getProductions();
-	PA.showProductions();
+	// PA.showProductions();
 	PA.initFirst();
-	PA.showFirst();
+	// PA.showFirst();
 	PA.createDFA();
+	// PA.outputAction();
+	// PA.outputGoto();
+	PA.outputActionToFile();
+	PA.outputGotoToFile();
+	PA.LRAnalyse(LA.getRes());
 
 	return 0;
 }

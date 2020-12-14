@@ -17,4 +17,6 @@ public:
 	// ~LexAnalyst();
 	Status Analyse();
 	Status Output();
+	list<Token>& getRes();
+	Status OutputToFile();
 };

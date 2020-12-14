@@ -1,0 +1,609 @@
+***********************Õ»¿Õ¼ä0***********************
+StatusStack:0 
+SymbolStack:# 
+***********************Õ»¿Õ¼ä1***********************
+StatusStack:3 0 
+SymbolStack:int # 
+***********************Õ»¿Õ¼ä2***********************
+StatusStack:2 0 
+SymbolStack:Type # 
+***********************Õ»¿Õ¼ä3***********************
+StatusStack:5 2 0 
+SymbolStack:ID Type # 
+***********************Õ»¿Õ¼ä4***********************
+StatusStack:6 5 2 0 
+SymbolStack:( ID Type # 
+***********************Õ»¿Õ¼ä5***********************
+StatusStack:7 6 5 2 0 
+SymbolStack:) ( ID Type # 
+***********************Õ»¿Õ¼ä6***********************
+StatusStack:9 7 6 5 2 0 
+SymbolStack:{ ) ( ID Type # 
+***********************Õ»¿Õ¼ä7***********************
+StatusStack:12 9 7 6 5 2 0 
+SymbolStack:int { ) ( ID Type # 
+***********************Õ»¿Õ¼ä8***********************
+StatusStack:24 12 9 7 6 5 2 0 
+SymbolStack:ID int { ) ( ID Type # 
+***********************Õ»¿Õ¼ä9***********************
+StatusStack:11 9 7 6 5 2 0 
+SymbolStack:VDeclare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä10***********************
+StatusStack:23 11 9 7 6 5 2 0 
+SymbolStack:; VDeclare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä11***********************
+StatusStack:12 23 11 9 7 6 5 2 0 
+SymbolStack:int ; VDeclare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä12***********************
+StatusStack:24 12 23 11 9 7 6 5 2 0 
+SymbolStack:ID int ; VDeclare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä13***********************
+StatusStack:11 23 11 9 7 6 5 2 0 
+SymbolStack:VDeclare ; VDeclare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä14***********************
+StatusStack:23 11 23 11 9 7 6 5 2 0 
+SymbolStack:; VDeclare ; VDeclare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä15***********************
+StatusStack:12 23 11 23 11 9 7 6 5 2 0 
+SymbolStack:int ; VDeclare ; VDeclare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä16***********************
+StatusStack:24 12 23 11 23 11 9 7 6 5 2 0 
+SymbolStack:ID int ; VDeclare ; VDeclare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä17***********************
+StatusStack:11 23 11 23 11 9 7 6 5 2 0 
+SymbolStack:VDeclare ; VDeclare ; VDeclare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä18***********************
+StatusStack:23 11 23 11 23 11 9 7 6 5 2 0 
+SymbolStack:; VDeclare ; VDeclare ; VDeclare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä19***********************
+StatusStack:12 23 11 23 11 23 11 9 7 6 5 2 0 
+SymbolStack:int ; VDeclare ; VDeclare ; VDeclare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä20***********************
+StatusStack:24 12 23 11 23 11 23 11 9 7 6 5 2 0 
+SymbolStack:ID int ; VDeclare ; VDeclare ; VDeclare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä21***********************
+StatusStack:11 23 11 23 11 23 11 9 7 6 5 2 0 
+SymbolStack:VDeclare ; VDeclare ; VDeclare ; VDeclare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä22***********************
+StatusStack:23 11 23 11 23 11 23 11 9 7 6 5 2 0 
+SymbolStack:; VDeclare ; VDeclare ; VDeclare ; VDeclare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä23***********************
+StatusStack:12 23 11 23 11 23 11 23 11 9 7 6 5 2 0 
+SymbolStack:int ; VDeclare ; VDeclare ; VDeclare ; VDeclare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä24***********************
+StatusStack:24 12 23 11 23 11 23 11 23 11 9 7 6 5 2 0 
+SymbolStack:ID int ; VDeclare ; VDeclare ; VDeclare ; VDeclare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä25***********************
+StatusStack:11 23 11 23 11 23 11 23 11 9 7 6 5 2 0 
+SymbolStack:VDeclare ; VDeclare ; VDeclare ; VDeclare ; VDeclare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä26***********************
+StatusStack:23 11 23 11 23 11 23 11 23 11 9 7 6 5 2 0 
+SymbolStack:; VDeclare ; VDeclare ; VDeclare ; VDeclare ; VDeclare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä27***********************
+StatusStack:38 23 11 23 11 23 11 23 11 23 11 9 7 6 5 2 0 
+SymbolStack:Declare ; VDeclare ; VDeclare ; VDeclare ; VDeclare ; VDeclare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä28***********************
+StatusStack:38 23 11 23 11 23 11 23 11 9 7 6 5 2 0 
+SymbolStack:Declare ; VDeclare ; VDeclare ; VDeclare ; VDeclare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä29***********************
+StatusStack:38 23 11 23 11 23 11 9 7 6 5 2 0 
+SymbolStack:Declare ; VDeclare ; VDeclare ; VDeclare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä30***********************
+StatusStack:38 23 11 23 11 9 7 6 5 2 0 
+SymbolStack:Declare ; VDeclare ; VDeclare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä31***********************
+StatusStack:38 23 11 9 7 6 5 2 0 
+SymbolStack:Declare ; VDeclare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä32***********************
+StatusStack:10 9 7 6 5 2 0 
+SymbolStack:Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä33***********************
+StatusStack:19 10 9 7 6 5 2 0 
+SymbolStack:ID Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä34***********************
+StatusStack:27 19 10 9 7 6 5 2 0 
+SymbolStack:= ID Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä35***********************
+StatusStack:33 27 19 10 9 7 6 5 2 0 
+SymbolStack:num = ID Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä36***********************
+StatusStack:32 27 19 10 9 7 6 5 2 0 
+SymbolStack:Factor = ID Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä37***********************
+StatusStack:31 27 19 10 9 7 6 5 2 0 
+SymbolStack:Item = ID Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä38***********************
+StatusStack:30 27 19 10 9 7 6 5 2 0 
+SymbolStack:AddExpression = ID Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä39***********************
+StatusStack:39 27 19 10 9 7 6 5 2 0 
+SymbolStack:Expression = ID Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä40***********************
+StatusStack:60 39 27 19 10 9 7 6 5 2 0 
+SymbolStack:; Expression = ID Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä41***********************
+StatusStack:18 10 9 7 6 5 2 0 
+SymbolStack:AssignSentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä42***********************
+StatusStack:14 10 9 7 6 5 2 0 
+SymbolStack:Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä43***********************
+StatusStack:19 14 10 9 7 6 5 2 0 
+SymbolStack:ID Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä44***********************
+StatusStack:27 19 14 10 9 7 6 5 2 0 
+SymbolStack:= ID Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä45***********************
+StatusStack:33 27 19 14 10 9 7 6 5 2 0 
+SymbolStack:num = ID Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä46***********************
+StatusStack:32 27 19 14 10 9 7 6 5 2 0 
+SymbolStack:Factor = ID Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä47***********************
+StatusStack:31 27 19 14 10 9 7 6 5 2 0 
+SymbolStack:Item = ID Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä48***********************
+StatusStack:30 27 19 14 10 9 7 6 5 2 0 
+SymbolStack:AddExpression = ID Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä49***********************
+StatusStack:39 27 19 14 10 9 7 6 5 2 0 
+SymbolStack:Expression = ID Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä50***********************
+StatusStack:60 39 27 19 14 10 9 7 6 5 2 0 
+SymbolStack:; Expression = ID Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä51***********************
+StatusStack:18 14 10 9 7 6 5 2 0 
+SymbolStack:AssignSentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä52***********************
+StatusStack:14 14 10 9 7 6 5 2 0 
+SymbolStack:Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä53***********************
+StatusStack:19 14 14 10 9 7 6 5 2 0 
+SymbolStack:ID Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä54***********************
+StatusStack:27 19 14 14 10 9 7 6 5 2 0 
+SymbolStack:= ID Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä55***********************
+StatusStack:33 27 19 14 14 10 9 7 6 5 2 0 
+SymbolStack:num = ID Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä56***********************
+StatusStack:32 27 19 14 14 10 9 7 6 5 2 0 
+SymbolStack:Factor = ID Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä57***********************
+StatusStack:31 27 19 14 14 10 9 7 6 5 2 0 
+SymbolStack:Item = ID Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä58***********************
+StatusStack:30 27 19 14 14 10 9 7 6 5 2 0 
+SymbolStack:AddExpression = ID Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä59***********************
+StatusStack:39 27 19 14 14 10 9 7 6 5 2 0 
+SymbolStack:Expression = ID Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä60***********************
+StatusStack:60 39 27 19 14 14 10 9 7 6 5 2 0 
+SymbolStack:; Expression = ID Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä61***********************
+StatusStack:18 14 14 10 9 7 6 5 2 0 
+SymbolStack:AssignSentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä62***********************
+StatusStack:14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä63***********************
+StatusStack:19 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:ID Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä64***********************
+StatusStack:27 19 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:= ID Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä65***********************
+StatusStack:33 27 19 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:num = ID Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä66***********************
+StatusStack:32 27 19 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Factor = ID Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä67***********************
+StatusStack:31 27 19 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Item = ID Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä68***********************
+StatusStack:30 27 19 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:AddExpression = ID Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä69***********************
+StatusStack:39 27 19 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Expression = ID Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä70***********************
+StatusStack:60 39 27 19 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:; Expression = ID Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä71***********************
+StatusStack:18 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:AssignSentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä72***********************
+StatusStack:14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä73***********************
+StatusStack:22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä74***********************
+StatusStack:37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä75***********************
+StatusStack:55 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:ID ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä76***********************
+StatusStack:53 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Factor ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä77***********************
+StatusStack:52 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Item ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä78***********************
+StatusStack:51 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:AddExpression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä79***********************
+StatusStack:76 51 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:> AddExpression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä80***********************
+StatusStack:100 76 51 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:( > AddExpression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä81***********************
+StatusStack:55 100 76 51 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:ID ( > AddExpression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä82***********************
+StatusStack:53 100 76 51 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Factor ( > AddExpression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä83***********************
+StatusStack:52 100 76 51 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Item ( > AddExpression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä84***********************
+StatusStack:82 52 100 76 51 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:+ Item ( > AddExpression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä85***********************
+StatusStack:55 82 52 100 76 51 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:ID + Item ( > AddExpression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä86***********************
+StatusStack:53 82 52 100 76 51 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Factor + Item ( > AddExpression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä87***********************
+StatusStack:52 82 52 100 76 51 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Item + Item ( > AddExpression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä88***********************
+StatusStack:106 82 52 100 76 51 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:AddExpression + Item ( > AddExpression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä89***********************
+StatusStack:51 100 76 51 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:AddExpression ( > AddExpression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä90***********************
+StatusStack:124 100 76 51 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Expression ( > AddExpression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä91***********************
+StatusStack:132 124 100 76 51 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:) Expression ( > AddExpression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä92***********************
+StatusStack:97 76 51 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Factor > AddExpression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä93***********************
+StatusStack:96 76 51 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Item > AddExpression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä94***********************
+StatusStack:95 76 51 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:AddExpression > AddExpression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä95***********************
+StatusStack:59 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Expression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä96***********************
+StatusStack:89 59 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:) Expression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä97***********************
+StatusStack:113 89 59 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:{ ) Expression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä98***********************
+StatusStack:126 113 89 59 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Declare { ) Expression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä99***********************
+StatusStack:19 126 113 89 59 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:ID Declare { ) Expression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä100***********************
+StatusStack:27 19 126 113 89 59 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:= ID Declare { ) Expression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä101***********************
+StatusStack:34 27 19 126 113 89 59 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:ID = ID Declare { ) Expression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä102***********************
+StatusStack:32 27 19 126 113 89 59 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Factor = ID Declare { ) Expression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä103***********************
+StatusStack:31 27 19 126 113 89 59 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Item = ID Declare { ) Expression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä104***********************
+StatusStack:47 31 27 19 126 113 89 59 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:+ Item = ID Declare { ) Expression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä105***********************
+StatusStack:35 47 31 27 19 126 113 89 59 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:( + Item = ID Declare { ) Expression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä106***********************
+StatusStack:55 35 47 31 27 19 126 113 89 59 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:ID ( + Item = ID Declare { ) Expression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä107***********************
+StatusStack:53 35 47 31 27 19 126 113 89 59 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Factor ( + Item = ID Declare { ) Expression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä108***********************
+StatusStack:84 53 35 47 31 27 19 126 113 89 59 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:* Factor ( + Item = ID Declare { ) Expression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä109***********************
+StatusStack:55 84 53 35 47 31 27 19 126 113 89 59 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:ID * Factor ( + Item = ID Declare { ) Expression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä110***********************
+StatusStack:53 84 53 35 47 31 27 19 126 113 89 59 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Factor * Factor ( + Item = ID Declare { ) Expression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä111***********************
+StatusStack:108 84 53 35 47 31 27 19 126 113 89 59 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Item * Factor ( + Item = ID Declare { ) Expression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä112***********************
+StatusStack:52 35 47 31 27 19 126 113 89 59 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Item ( + Item = ID Declare { ) Expression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä113***********************
+StatusStack:82 52 35 47 31 27 19 126 113 89 59 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:+ Item ( + Item = ID Declare { ) Expression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä114***********************
+StatusStack:54 82 52 35 47 31 27 19 126 113 89 59 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:num + Item ( + Item = ID Declare { ) Expression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä115***********************
+StatusStack:53 82 52 35 47 31 27 19 126 113 89 59 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Factor + Item ( + Item = ID Declare { ) Expression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä116***********************
+StatusStack:52 82 52 35 47 31 27 19 126 113 89 59 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Item + Item ( + Item = ID Declare { ) Expression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä117***********************
+StatusStack:106 82 52 35 47 31 27 19 126 113 89 59 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:AddExpression + Item ( + Item = ID Declare { ) Expression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä118***********************
+StatusStack:51 35 47 31 27 19 126 113 89 59 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:AddExpression ( + Item = ID Declare { ) Expression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä119***********************
+StatusStack:57 35 47 31 27 19 126 113 89 59 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Expression ( + Item = ID Declare { ) Expression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä120***********************
+StatusStack:87 57 35 47 31 27 19 126 113 89 59 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:) Expression ( + Item = ID Declare { ) Expression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä121***********************
+StatusStack:32 47 31 27 19 126 113 89 59 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Factor + Item = ID Declare { ) Expression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä122***********************
+StatusStack:31 47 31 27 19 126 113 89 59 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Item + Item = ID Declare { ) Expression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä123***********************
+StatusStack:72 47 31 27 19 126 113 89 59 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:AddExpression + Item = ID Declare { ) Expression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä124***********************
+StatusStack:30 27 19 126 113 89 59 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:AddExpression = ID Declare { ) Expression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä125***********************
+StatusStack:39 27 19 126 113 89 59 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Expression = ID Declare { ) Expression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä126***********************
+StatusStack:60 39 27 19 126 113 89 59 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:; Expression = ID Declare { ) Expression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä127***********************
+StatusStack:18 126 113 89 59 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:AssignSentence Declare { ) Expression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä128***********************
+StatusStack:14 126 113 89 59 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Sentence Declare { ) Expression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä129***********************
+StatusStack:134 126 113 89 59 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Sentences Declare { ) Expression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä130***********************
+StatusStack:137 134 126 113 89 59 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:} Sentences Declare { ) Expression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä131***********************
+StatusStack:114 89 59 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:SentenceBlock ) Expression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä132***********************
+StatusStack:127 114 89 59 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:else SentenceBlock ) Expression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä133***********************
+StatusStack:111 127 114 89 59 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:{ else SentenceBlock ) Expression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä134***********************
+StatusStack:125 111 127 114 89 59 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Declare { else SentenceBlock ) Expression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä135***********************
+StatusStack:19 125 111 127 114 89 59 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:ID Declare { else SentenceBlock ) Expression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä136***********************
+StatusStack:27 19 125 111 127 114 89 59 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:= ID Declare { else SentenceBlock ) Expression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä137***********************
+StatusStack:34 27 19 125 111 127 114 89 59 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:ID = ID Declare { else SentenceBlock ) Expression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä138***********************
+StatusStack:32 27 19 125 111 127 114 89 59 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Factor = ID Declare { else SentenceBlock ) Expression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä139***********************
+StatusStack:31 27 19 125 111 127 114 89 59 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Item = ID Declare { else SentenceBlock ) Expression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä140***********************
+StatusStack:30 27 19 125 111 127 114 89 59 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:AddExpression = ID Declare { else SentenceBlock ) Expression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä141***********************
+StatusStack:39 27 19 125 111 127 114 89 59 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Expression = ID Declare { else SentenceBlock ) Expression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä142***********************
+StatusStack:60 39 27 19 125 111 127 114 89 59 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:; Expression = ID Declare { else SentenceBlock ) Expression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä143***********************
+StatusStack:18 125 111 127 114 89 59 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:AssignSentence Declare { else SentenceBlock ) Expression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä144***********************
+StatusStack:14 125 111 127 114 89 59 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Sentence Declare { else SentenceBlock ) Expression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä145***********************
+StatusStack:133 125 111 127 114 89 59 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Sentences Declare { else SentenceBlock ) Expression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä146***********************
+StatusStack:136 133 125 111 127 114 89 59 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:} Sentences Declare { else SentenceBlock ) Expression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä147***********************
+StatusStack:135 127 114 89 59 37 22 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:SentenceBlock else SentenceBlock ) Expression ( if Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä148***********************
+StatusStack:15 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:IfSentence Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä149***********************
+StatusStack:14 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Sentence Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä150***********************
+StatusStack:21 14 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:while Sentence Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä151***********************
+StatusStack:36 21 14 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:( while Sentence Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä152***********************
+StatusStack:55 36 21 14 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:ID ( while Sentence Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä153***********************
+StatusStack:53 36 21 14 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Factor ( while Sentence Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä154***********************
+StatusStack:52 36 21 14 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Item ( while Sentence Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä155***********************
+StatusStack:51 36 21 14 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:AddExpression ( while Sentence Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä156***********************
+StatusStack:79 51 36 21 14 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:<= AddExpression ( while Sentence Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä157***********************
+StatusStack:98 79 51 36 21 14 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:num <= AddExpression ( while Sentence Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä158***********************
+StatusStack:97 79 51 36 21 14 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Factor <= AddExpression ( while Sentence Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä159***********************
+StatusStack:96 79 51 36 21 14 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Item <= AddExpression ( while Sentence Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä160***********************
+StatusStack:103 79 51 36 21 14 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:AddExpression <= AddExpression ( while Sentence Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä161***********************
+StatusStack:58 36 21 14 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Expression ( while Sentence Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä162***********************
+StatusStack:88 58 36 21 14 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:) Expression ( while Sentence Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä163***********************
+StatusStack:111 88 58 36 21 14 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:{ ) Expression ( while Sentence Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä164***********************
+StatusStack:125 111 88 58 36 21 14 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Declare { ) Expression ( while Sentence Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä165***********************
+StatusStack:19 125 111 88 58 36 21 14 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:ID Declare { ) Expression ( while Sentence Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä166***********************
+StatusStack:27 19 125 111 88 58 36 21 14 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:= ID Declare { ) Expression ( while Sentence Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä167***********************
+StatusStack:34 27 19 125 111 88 58 36 21 14 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:ID = ID Declare { ) Expression ( while Sentence Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä168***********************
+StatusStack:32 27 19 125 111 88 58 36 21 14 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Factor = ID Declare { ) Expression ( while Sentence Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä169***********************
+StatusStack:49 32 27 19 125 111 88 58 36 21 14 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:* Factor = ID Declare { ) Expression ( while Sentence Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä170***********************
+StatusStack:33 49 32 27 19 125 111 88 58 36 21 14 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:num * Factor = ID Declare { ) Expression ( while Sentence Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä171***********************
+StatusStack:32 49 32 27 19 125 111 88 58 36 21 14 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Factor * Factor = ID Declare { ) Expression ( while Sentence Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä172***********************
+StatusStack:74 49 32 27 19 125 111 88 58 36 21 14 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Item * Factor = ID Declare { ) Expression ( while Sentence Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä173***********************
+StatusStack:31 27 19 125 111 88 58 36 21 14 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Item = ID Declare { ) Expression ( while Sentence Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä174***********************
+StatusStack:30 27 19 125 111 88 58 36 21 14 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:AddExpression = ID Declare { ) Expression ( while Sentence Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä175***********************
+StatusStack:39 27 19 125 111 88 58 36 21 14 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Expression = ID Declare { ) Expression ( while Sentence Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä176***********************
+StatusStack:60 39 27 19 125 111 88 58 36 21 14 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:; Expression = ID Declare { ) Expression ( while Sentence Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä177***********************
+StatusStack:18 125 111 88 58 36 21 14 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:AssignSentence Declare { ) Expression ( while Sentence Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä178***********************
+StatusStack:14 125 111 88 58 36 21 14 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Sentence Declare { ) Expression ( while Sentence Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä179***********************
+StatusStack:133 125 111 88 58 36 21 14 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Sentences Declare { ) Expression ( while Sentence Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä180***********************
+StatusStack:136 133 125 111 88 58 36 21 14 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:} Sentences Declare { ) Expression ( while Sentence Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä181***********************
+StatusStack:112 88 58 36 21 14 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:SentenceBlock ) Expression ( while Sentence Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä182***********************
+StatusStack:16 14 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:WhileSentence Sentence Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä183***********************
+StatusStack:14 14 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Sentence Sentence Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä184***********************
+StatusStack:20 14 14 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:return Sentence Sentence Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä185***********************
+StatusStack:34 20 14 14 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:ID return Sentence Sentence Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä186***********************
+StatusStack:32 20 14 14 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Factor return Sentence Sentence Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä187***********************
+StatusStack:31 20 14 14 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Item return Sentence Sentence Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä188***********************
+StatusStack:30 20 14 14 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:AddExpression return Sentence Sentence Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä189***********************
+StatusStack:29 20 14 14 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Expression return Sentence Sentence Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä190***********************
+StatusStack:40 29 20 14 14 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:; Expression return Sentence Sentence Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä191***********************
+StatusStack:17 14 14 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:ReturnSentence Sentence Sentence Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä192***********************
+StatusStack:14 14 14 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Sentence Sentence Sentence Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä193***********************
+StatusStack:26 14 14 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Sentences Sentence Sentence Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä194***********************
+StatusStack:26 14 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Sentences Sentence Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä195***********************
+StatusStack:26 14 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Sentences Sentence Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä196***********************
+StatusStack:26 14 14 14 10 9 7 6 5 2 0 
+SymbolStack:Sentences Sentence Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä197***********************
+StatusStack:26 14 14 10 9 7 6 5 2 0 
+SymbolStack:Sentences Sentence Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä198***********************
+StatusStack:26 14 10 9 7 6 5 2 0 
+SymbolStack:Sentences Sentence Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä199***********************
+StatusStack:13 10 9 7 6 5 2 0 
+SymbolStack:Sentences Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä200***********************
+StatusStack:25 13 10 9 7 6 5 2 0 
+SymbolStack:} Sentences Declare { ) ( ID Type # 
+***********************Õ»¿Õ¼ä201***********************
+StatusStack:8 7 6 5 2 0 
+SymbolStack:SentenceBlock ) ( ID Type # 
+***********************Õ»¿Õ¼ä202***********************
+StatusStack:1 0 
+SymbolStack:Program # 

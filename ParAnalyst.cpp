@@ -12,13 +12,24 @@ bool operator ==(const Symbol& a, const Symbol& b)
 
 bool operator <(const Item& a, const Item& b)
 {
-	return a.idProduction < b.idProduction;
+	if (a.idProduction == b.idProduction)
+	{
+		if (a.expect == b.expect)
+		{
+			return a.posPoint < b.posPoint;
+		}
+		else
+			return a.expect < b.expect;
+	}
+	else
+		return a.idProduction < b.idProduction;
 }
 
 bool operator ==(const Item& a, const Item& b)
 {
-	return a.idProduction == b.idProduction;
+	return a.idProduction == b.idProduction && a.expect == b.expect && a.posPoint == b.posPoint;
 }
+
 
 Symbol::Symbol(string content, bool Vt)
 {
@@ -36,11 +47,22 @@ Production::Production()
 	// 这里啥也不做
 }
 
+Behavior::Behavior()
+{
+	// 这里啥也不做
+}
+
 Item::Item(int posPoint, Symbol expect, int idPro)
 {
 	this->posPoint = posPoint;
 	this->expect = expect;
 	this->idProduction = idPro;
+}
+
+Behavior::Behavior(Behave bh, int S)
+{
+	this->bh = bh;
+	this->nextS = S;
 }
 
 Status ParAnalyst::openInputProductions(string path)
@@ -94,11 +116,11 @@ Status ParAnalyst::getProductions()
 // 输出读到的产生式（test）
 Status ParAnalyst::showProductions()
 {
-	cout << setw(10) << "ID" << setw(20) << "LEFT" << setw(10)  << "   " << "RIGHT" << endl;
+	cout << setw(10) << "ID" << setw(20) << "LEFT" << setw(10) << "   " << "RIGHT" << endl;
 	vector<Production>::iterator itProduction;
 	for (itProduction = Productions.begin(); itProduction != Productions.end(); itProduction++)
 	{
-		cout << setw(10) << itProduction->id  << "   " << setw(20) << itProduction->lcontent.content << "   ";
+		cout << setw(10) << itProduction->id << "   " << setw(20) << itProduction->lcontent.content << "   ";
 		vector<Symbol>::iterator itSymbol;
 		for (itSymbol = itProduction->rcontent.begin(); itSymbol != itProduction->rcontent.end(); itSymbol++)
 			cout << itSymbol->content << ' ';
@@ -127,7 +149,7 @@ Status ParAnalyst::initFirst()
 				/*
 				 * 如果这里的右部符号是终结符，将其加入，直接结束遍历该项目的右部符号即可(break)
 				 */
-				if (itSymbol->Vt == true)
+				if (isVt(itSymbol->content) == true)
 				{
 					if (First[itProduction->lcontent].insert(*itSymbol).second == true)
 						isAddFirst = true;
@@ -244,7 +266,7 @@ set<Symbol> ParAnalyst::getExpect(list<Symbol> S)
 			/*
 			 * 如果这里的右部符号是终结符，将其加入，直接结束遍历该项目的右部符号即可(break)
 			 */
-			if (itList->Vt == true)
+			if (isVt(itList->content) == true)
 			{
 				if (retSet.insert(*itList).second == true)
 					isAddFirst = true;
@@ -302,7 +324,7 @@ I ParAnalyst::Closure(Item item)
 
 	// 如果是规约项目
 	// 如果点后面是终结符
-	if (item.posPoint == Productions[item.idProduction].rcontent.size() || Productions[item.idProduction].rcontent[item.posPoint].Vt)
+	if (item.posPoint == Productions[item.idProduction].rcontent.size() || isVt(Productions[item.idProduction].rcontent[item.posPoint].content))
 	{
 		ret.Items.insert(item);
 	}
@@ -320,9 +342,9 @@ I ParAnalyst::Closure(Item item)
 
 				// 可能size会有问题
 				// 将右边的产生式依次放入SymList，作为获得展望串的入口参数
-				for (int cnt = 1; item.posPoint + cnt < Productions[item.idProduction].rcontent.size(); cnt++)
+				for (int cnt = 1; item.posPoint + cnt < (int)(Productions[item.idProduction].rcontent.size()); cnt++)
 				{
-					SymList.push_back(Productions[item.idProduction].rcontent[cnt]);
+					SymList.push_back(Productions[item.idProduction].rcontent[item.posPoint + cnt]);
 				}
 				SymList.push_back(item.expect); //记得放a
 
@@ -334,11 +356,18 @@ I ParAnalyst::Closure(Item item)
 				for (itSymbol = retSet.begin(); itSymbol != retSet.end(); itSymbol++)
 				{
 					I temp = Closure(Item(0, *itSymbol, itProduction->id));
-					
+
 					set<Item>::iterator itItem;
 					for (itItem = temp.Items.begin(); itItem != temp.Items.end(); itItem++)
 					{
-						ret.Items.insert(*itItem);
+						if (ret.Items.insert(*itItem).second == 0)
+						{
+							//cout << "重复插入同样的元素" << endl;
+							//cout << itItem->idProduction << endl;
+							//cout << itItem->expect.content << endl;
+							//cout << itItem->posPoint << endl;
+						}
+
 					}
 				}
 			}
@@ -350,21 +379,361 @@ I ParAnalyst::Closure(Item item)
 
 Status ParAnalyst::createDFA()
 {
-	DFA.status.push_back(Closure(Item(0, Symbol("#", true), 0)));
+	cout << "创建文法的LR(1)表中，请稍候，这里不是卡死了..." << endl;
 
-	cout << endl;
+	// 首先先新建好I0状态，从I0状态出发，去看别的状态
+	I itemp = Closure(Item(0, Symbol("#", true), 0));
+	DFA.status.push_back(itemp);
 
-	list<I>::iterator itI;
-	for (itI = DFA.status.begin(); itI != DFA.status.end(); itI++)
+	int idSNow = 0;
+	// 遍历每一个状态的每一个项目
+	list<I>::iterator itStatus;
+	for (itStatus = DFA.status.begin(); itStatus != DFA.status.end(); itStatus++, idSNow++)
 	{
-		set<Item>::iterator itS;
-		for (itS = itI->Items.begin(); itS != itI->Items.end(); itS++)
+		set<Item>::iterator itItem;
+		int cnt = 0;
+		for (itItem = itStatus->Items.begin(), cnt = 0; itItem != itStatus->Items.end(); itItem++, cnt++)
 		{
-			cout << "("  <<itS->idProduction << "," << itS->expect.content << "," << itS->posPoint << ")" << endl;
-			cout << "end of Items" << endl;
+			// 若为规约项目（点在最后）
+			if (Productions[itItem->idProduction].rcontent.size() == itItem->posPoint)
+			{
+				GOTO tempGOTO(idSNow, itItem->expect);
+				if (itItem->idProduction == 0) // 用第一个拓广文法规约
+				{
+					ActionTb[tempGOTO] = Behavior(accept, itItem->idProduction);
+				}
+				else
+				{
+					ActionTb[tempGOTO] = Behavior(reduct, itItem->idProduction);
+				}
+			}
+			// 若为移进项目 或者 读到了非终结符号
+			else
+			{
+				// 取出点后面的符号
+				Symbol nextSymbol = Productions[itItem->idProduction].rcontent[itItem->posPoint];
+
+				// 先判断是否已经有之前的项目找过了对应的nextSymbol的状态，如果有就直接去找别的项目
+				if (DFA.gotos.count(GOTO(idSNow, nextSymbol)) == 1)
+					continue;
+
+				// 否则就产生新状态
+				I StatusNew = Closure(Item(itItem->posPoint + 1, itItem->expect, itItem->idProduction));
+
+				// 这里需要看一眼下面的项目的nextSymbol是不是也是一样的，如果是，把那个项目的闭包同样加入新状态，他们是同一种移进
+				if (itItem != itStatus->Items.end())
+				{
+					set<Item>::iterator nextItItem = itItem;
+					nextItItem++;
+					for (; nextItItem != itStatus->Items.end(); nextItItem++)
+					{
+						if (Productions[nextItItem->idProduction].rcontent.size() == nextItItem->posPoint)
+							continue;
+						// 若这个状态之后的项目也是移进nextSymbol
+						else if (Productions[nextItItem->idProduction].rcontent[nextItItem->posPoint] == nextSymbol)
+						{
+							I StatusTemp = Closure(Item(nextItItem->posPoint + 1, nextItItem->expect, nextItItem->idProduction));
+							StatusNew.Items.insert(StatusTemp.Items.begin(), StatusTemp.Items.end());
+						}
+					}
+				}
+
+				// 这里需要看一下是不是已经有了一样的状态
+				list<I>::iterator itHadS;
+				int idS_ = 0;
+				bool isFound = false;
+				// 遍历已有状态，看看是不是已经出现了一样的状态
+				for (itHadS = DFA.status.begin(); itHadS != DFA.status.end(); itHadS++, idS_++)
+				{
+					// 如果已经有这样的状态了，就将当前状态读到nextSymbol指向已有的状态
+					if (itHadS->Items == StatusNew.Items)
+					{
+						DFA.gotos[GOTO(idSNow, nextSymbol)] = idS_;
+						if (isVt(nextSymbol.content)) // 假如是终结符
+							ActionTb[GOTO(idSNow, nextSymbol)] = Behavior(shift, idS_);
+						else // 假如是非终结符，这里更新gototb
+							GotoTb[GOTO(idSNow, nextSymbol)] = idS_;
+						isFound = true;
+						break;
+					}
+				}
+
+				// 如果是新状态
+				if (isFound == false)
+				{
+					DFA.status.push_back(StatusNew);
+					DFA.gotos[GOTO(idSNow, nextSymbol)] = DFA.status.size() - 1;
+					if (isVt(nextSymbol.content))
+						ActionTb[GOTO(idSNow, nextSymbol)] = Behavior(shift, DFA.status.size() - 1);
+					else
+						GotoTb[GOTO(idSNow, nextSymbol)] = DFA.status.size() - 1;
+				}
+
+			}// end of else
+
+		}// end of 遍历项目
+	}// end of 遍历状态
+
+
+
+
+
+	//int cntStatus = 0;
+	//int cntItem = 0;
+	//// test
+	//cout << endl;
+	//list<I>::iterator itI;
+	//for (itI = DFA.status.begin(); itI != DFA.status.end(); itI++)
+	//{
+	//	set<Item>::iterator itS;
+	//	for (itS = itI->Items.begin(); itS != itI->Items.end(); itS++)
+	//	{
+	//		cout << "(" << itS->idProduction << "," << itS->expect.content << "," << itS->posPoint << ")" << endl;
+	//		cout << "end of Items" << endl;
+	//		cntItem++;
+	//	}
+	//	cout << "end of Status" << endl;
+	//	cntStatus++;
+	//}
+	//cout << "共有" << cntItem << "个项目" << endl;
+	//cout << "共有" << cntStatus << "个状态" << endl;
+
+
+
+	return OK;
+}
+
+Status ParAnalyst::outputAction()
+{
+	cout << "***********************************************Action***********************************************" << endl;
+	map<GOTO, Behavior>::iterator itMap;
+	int cnt = 0;
+	for (cnt = 0, itMap = ActionTb.begin(); itMap != ActionTb.end(); itMap++, cnt++)
+	{
+		cout << cnt << "   " << itMap->first.first << "   " << itMap->first.second.content << "   ";
+		if (itMap->second.bh == 0)
+			cout << "s";
+		else if (itMap->second.bh == 1)
+			cout << "r";
+		else if (itMap->second.bh == 2)
+			cout << "acc";
+		else
+			cout << "error";
+		cout << "   " << itMap->second.nextS << endl;
+	}
+	return OK;
+}
+
+Status ParAnalyst::outputActionToFile()
+{
+	ofstream out;
+	out.open("outputAction.txt", ios::out);
+	if (!out.is_open())
+	{
+		cerr << "打开输出文件outputAction.txt失败" << endl;
+		exit(-1);
+	}
+
+	out << "***********************************************Action***********************************************" << endl;
+	map<GOTO, Behavior>::iterator itMap;
+	int cnt = 0;
+	for (cnt = 0, itMap = ActionTb.begin(); itMap != ActionTb.end(); itMap++, cnt++)
+	{
+		out << cnt << "   " << itMap->first.first << "   " << itMap->first.second.content << "   ";
+		if (itMap->second.bh == 0)
+			out << "shift";
+		else if (itMap->second.bh == 1)
+			out << "reduct";
+		else if (itMap->second.bh == 2)
+			out << "acc";
+		else
+			out << "error";
+		out << "   " << itMap->second.nextS << endl;
+	}
+
+	out.close();
+	return OK;
+}
+
+Status ParAnalyst::outputGoto()
+{
+	cout << "***********************************************Goto***********************************************" << endl;
+	map<GOTO, int>::iterator itMap;
+	int cnt = 0;
+	for (cnt = 0, itMap = GotoTb.begin(); itMap != GotoTb.end(); itMap++, cnt++)
+	{
+		cout << cnt << "   " << itMap->first.first << "   " << itMap->first.second.content << "   " << itMap->second << endl;
+	}
+	return OK;
+}
+
+Status ParAnalyst::outputGotoToFile()
+{
+	ofstream out;
+	out.open("outputGoto.txt", ios::out);
+	if (!out.is_open())
+	{
+		cerr << "打开输出文件outputGoto.txt失败" << endl;
+		exit(-1);
+	}
+	out << "***********************************************Goto***********************************************" << endl;
+	map<GOTO, int>::iterator itMap;
+	int cnt = 0;
+	for (cnt = 0, itMap = GotoTb.begin(); itMap != GotoTb.end(); itMap++, cnt++)
+	{
+		out << cnt << "   " << itMap->first.first << "   " << itMap->first.second.content << "   " << itMap->second << endl;
+	}
+	out.close();
+	return OK;
+}
+
+Status ParAnalyst::outputStatusStack()
+{
+	stack<int> S = StatusStack;
+	cout << "StatusStack:";
+	for (int cnt = 0; !S.empty(); cnt++)
+	{
+		cout << S.top() << ' ';
+		S.pop();
+	}
+	cout << endl;
+	return OK;
+}
+
+Status ParAnalyst::outputSymbolStack()
+{
+	stack<Symbol> S = SymbolStack;
+	cout << "SymbolStack:";
+	for (int cnt = 0; !S.empty(); cnt++)
+	{
+		cout << S.top().content << ' ';
+		S.pop();
+	}
+	cout << endl;
+	return OK;
+}
+
+Status ParAnalyst::outputStack(int cnt)
+{
+	cout << "***********************栈空间" << cnt << "***********************" << endl;
+	this->outputStatusStack();
+	this->outputSymbolStack();
+	return OK;
+}
+
+Status ParAnalyst::outputStackToFile(int cnt)
+{
+	
+	ofstream out;
+
+	if (cnt == 0)
+		out.open("outputStack.txt", ios::ate);
+	else
+		out.open("outputStack.txt", ios::app);
+
+	if (!out.is_open())
+	{
+		cerr << "打开输出文件outputStack.txt失败" << endl;
+		exit(-1);
+	}
+
+	out << "***********************栈空间" << cnt << "***********************" << endl;
+
+	stack<int> S0 = StatusStack;
+	out << "StatusStack:";
+	for (int cnt = 0; !S0.empty(); cnt++)
+	{
+		out << S0.top() << ' ';
+		S0.pop();
+	}
+	out << endl;
+
+	stack<Symbol> S1 = SymbolStack;
+	out << "SymbolStack:";
+	for (int cnt = 0; !S1.empty(); cnt++)
+	{
+		out << S1.top().content << ' ';
+		S1.pop();
+	}
+	out << endl;
+
+	out.close();
+	return OK;
+}
+
+Status ParAnalyst::LRAnalyse(list<Token> LexRes)
+{
+	SymbolStack.push(Symbol("#", true));
+	StatusStack.push(0);
+
+	int cnt = 0;
+
+	list<Token>::iterator itToken = LexRes.begin();
+	while (itToken != LexRes.end())
+	{
+		this->outputStack(cnt);
+		this->outputStackToFile(cnt);
+		cnt++;
+
+		// 如果读到注释，就继续
+		if (itToken->first == LCOMMENT || itToken->first == LPCOMMENT || itToken->first == RPCOMMENT || itToken->first == PCOMMENT)
+		{
+			itToken++;
+			continue;
 		}
-		cout << "end of Status" << endl;
+
+		//if (itToken->first == ENDFILE)
+		//	break;
+
+		Symbol next;
+		if (itToken->first == ID)
+			next = Symbol("ID", true);
+		else if (itToken->first == NUM)
+			next = Symbol("num", true);
+		else
+			next = Symbol(itToken->second, true);
+
+		Behavior Bh = ActionTb[GOTO(StatusStack.top(), next)];
+
+		// 开始LR分析，利用两个栈
+		if (Bh.bh == shift) // 若为移进
+		{
+			SymbolStack.push(next);
+			StatusStack.push(Bh.nextS);
+			itToken++;
+			continue;
+		}
+
+		else if (Bh.bh == reduct) // 若为归约
+		{
+			Production p = Productions[Bh.nextS];
+			int popNum = p.rcontent.size();
+			// 弹出对应栈顶元素popNum个
+			for (int cnt = 0; cnt < popNum; cnt++)
+			{
+				SymbolStack.pop();
+				StatusStack.pop();
+			}
+			// 压入对应的Goto表中的状态，归约式的左端
+			SymbolStack.push(p.lcontent);
+			StatusStack.push(GotoTb[GOTO(StatusStack.top(), p.lcontent)]);
+		}
+
+		else if (Bh.bh == accept) // 接受
+		{
+			cout << "accept!" << endl;
+			cout << "成功归约出目标结果，程序结束" << endl;
+			break;
+		}
+
+		else // error
+		{
+			cout << "归约过程出现错误，已跳出，请检查你的输入程序，栈断点值已经保留在outputStack.txt中" << endl;
+			break;
+		}
+
 	}
 
 	return OK;
 }
+

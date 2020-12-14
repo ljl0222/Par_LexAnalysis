@@ -9,6 +9,8 @@
 #include <iomanip>
 #include <map>
 #include <set>
+#include <stack>
+#include <cstdlib>
 
 using namespace std;
 
@@ -31,7 +33,7 @@ typedef enum
 	INT, VOID, IF, ELSE, WHILE, RETURN,
 
 	// 标识符(变量名)
-	ID, 
+	ID,
 
 	// 数字
 	NUM,
